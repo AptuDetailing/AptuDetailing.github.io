@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Société en création</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .logo-placeholder {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        }
+
+        .logo-placeholder::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px dashed rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 0.3;
+            }
+        }
+
+        .divider {
+            position: relative;
+            height: 1px;
+            width: 100px;
+            margin: 1rem auto;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .divider::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: -4px;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: black;
+        }
+
+        .btn-hover-effect {
+            transition: all 0.3s ease;
+        }
+
+        .btn-hover-effect:hover {
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body class="bg-white flex flex-col items-center justify-center p-6 font-sans" style="min-height: 100vh;">
+    <div class="logo-placeholder mb-8 animate__animated animate__fadeIn">
+        <a href="foxdetailing.fr"><img src="assets/img/logo2.png" width="170" alt="Fox Detailing Logo"></a>
+    </div>
+
+    <div class="max-w-2xl mx-auto text-center animate__animated animate__fadeInUp animate__delay-1s">
+        <h1 class="text-4xl md:text-5xl font-light tracking-tight mb-4">NOUS SOMMES EN COURS DE CRÉATION</h1>
+
+        <div class="divider my-6"></div>
+
+        <p class="text-lg md:text-xl font-light text-gray-600 mb-8 leading-relaxed">
+            Notre société est actuellement en phase de lancement. Nous travaillons à bâtir quelque chose d'exceptionnel
+            pour vous.
+        </p>
+
+        <div class="flex justify-center mt-10 animate__animated animate__fadeIn animate__delay-2s">
+            <a href="index.html"
+                class="btn-hover-effect border border-black px-8 py-3 font-medium tracking-wide hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black focus:ring-opacity-30 transition-all">
+                VOIR LE SITE EN CONSTRUCTION
+            </a>
+        </div>
+
+        <p class="text-xs text-gray-400 mt-6 animate__animated animate__fadeIn animate__delay-3s">
+            * Les informations et tarifs présentés peuvent évoluer pendant cette phase
+        </p>
+    </div>
+</body>
+
+</html>
